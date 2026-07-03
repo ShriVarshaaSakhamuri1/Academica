@@ -1,0 +1,861 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body {
+  font-family: Poppins, sans-serif;
+    margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Header Styles */
+header {
+  background-color: #0062cc;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img.logo {
+  height: 50px;
+}
+
+/* Mobile menu toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+/* Navigation Menu */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+nav ul li a:hover {
+  border-bottom: 2px solid white;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('../public/EMPOWERING.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-top: 15px;
+  font-weight: 300;
+}
+
+.hero button {
+  background-color: #28a745;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 200px;
+}
+
+.hero button:hover {
+  background-color: #218838;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+.feature {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  width: 30%;
+  margin: 15px;
+}
+
+.feature h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.feature p {
+  font-size: 16px;
+  color: #666;
+}
+
+.feature a {
+  color: #0062cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.feature a:hover {
+  text-decoration: underline;
+}
+
+/* Testimonials */
+.testimonials {
+  background-color: #f1f1f1;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+.testimonial {
+  display: inline-block;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  margin: 15px;
+  text-align: left;
+}
+
+.testimonial p {
+  font-size: 14px;
+  color: #666;
+}
+
+.testimonial h3 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Footer */
+footer {
+  background-color: #004085;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  nav ul {
+      display: none;
+      flex-direction: column;
+      background-color: #0062cc;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+  }
+
+  nav ul li {
+      margin: 10px 0;
+  }
+
+  .menu-toggle {
+      display: flex;
+  }
+
+  .menu-toggle.active + nav ul {
+      display: flex;
+  }
+
+  .features {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .feature {
+      width: 80%;
+  }
+
+  .hero h1 {
+      font-size: 36px;
+  }
+}
+
+/* Responsive: Show toggle and hide menu on mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    /* background-color: #f8f9fa; */
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Show the menu when the nav has the 'open' class */
+  nav.open ul {
+    display: flex;
+  }
+
+  nav ul li {
+    padding: 10px 0;
+  }
+}
+
+.networking {
+  padding: 20px;
+}
+
+.groups ul, .forums ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.groups li, .forums li {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.groups h3, .forums h3 {
+  margin-bottom: 10px;
+}
+
+.groups button, .forums button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form {
+  margin-top: 20px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px 15px;
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* General container styles for the forums */
+.forums {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styles */
+.forums h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.forums p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* List styling for discussions */
+.forums ul {
+  list-style: none;
+  padding: 0;
+}
+
+.forums li {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.forums li:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Topic title and description */
+.forums h3 {
+  font-size: 1.5rem;
+  color: #007BFF;
+  margin-bottom: 5px;
+}
+
+.forums p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.forums strong {
+  color: #333;
+}
+
+/* New discussion form styling */
+form {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Form field styling */
+form input[type="text"],
+form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+form button:hover {
+  background-color: #218838;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .forums {
+    width: 100%;
+    padding: 15px;
+  }
+
+  form input[type="text"],
+  form textarea {
+    font-size: 0.9rem;
+  }
+
+  .forums h2 {
+    font-size: 1.5rem;
+  }
+
+  .forums h3 {
+    font-size: 1.2rem;
+  }
+}
+.jobs-internships {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.jobs-internships h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.jobs-internships p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.filter-options {
+  margin-bottom: 20px;
+}
+
+.filter-options button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-options button:hover {
+  background-color: #0056b3;
+}
+
+/* Job and Internship Listing Styles */
+.jobs-internships ul {
+  list-style: none;
+  padding: 0;
+}
+
+.jobs-internships li {
+  background-color: white;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.jobs-internships li:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.jobs-internships h3 {
+  font-size: 1.5rem;
+  color: #007BFF;
+}
+
+.jobs-internships span {
+  font-size: 1rem;
+  color: #555;
+}
+
+.jobs-internships p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Form Styling */
+.new-listing-form {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.new-listing-form h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.new-listing-form input[type="text"],
+.new-listing-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.new-listing-form button {
+  padding: 12px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.new-listing-form button:hover {
+  background-color: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .jobs-internships {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .filter-options button {
+    margin-bottom: 10px;
+  }
+}
+.events-page {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.events-page h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.events-page p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+/* Calendar Styling */
+.fc {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Event Listings */
+.event-listings {
+  list-style: none;
+  padding: 0;
+}
+
+.event-listings li {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-listings h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.event-listings span {
+  font-size: 1rem;
+  color: #555;
+}
+
+.event-listings button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.event-listings button:hover {
+  background-color: #0056b3;
+}
+
+/* Event Modal */
+.event-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  width: 50%;
+  
+}
+
+.event-modal h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.event-modal p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.event-modal button {
+  background-color: #d9534f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.event-modal button:hover {
+  background-color: #c9302c;
+}
+
+/* New Event Form */
+.new-event-form {
+  margin-top: 30px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.new-event-form input,
+.new-event-form select,
+.new-event-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.new-event-form button {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.new-event-form button:hover {
+  background-color: #218838;
+}
+
+.settings-container {
+  display: flex;
+}
+
+.settings-container nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.settings-container nav ul li {
+  margin: 10px 0;
+}
+
+.active-link {
+  font-weight: bold;
+  color: blue;
+}
+
+.settings-content {
+  margin-left: 20px;
+}
+.mentorship-program, .mentorship-application {
+  padding: 20px;
+}
+
+.mentor-cards {
+  display: flex;
+  gap: 20px;
+}
+
+.mentor-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.career-development-page {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  text-align: center;
+  /* margin-bottom: 30px; */
+}
+
+.articles-section {
+  margin-bottom: 40px;
+}
+
+.articles-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.article-item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.mentorship-program-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.apply-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.apply-button:hover {
+  background-color: #0056b3;
+}
+
+.admin-dashboard {
+  padding: 20px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.actions {
+  margin-bottom: 20px;
+}
+
+.btn {
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  color: white;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+.announceclass {
+  display: flex;
+  justify-content: baseline;
+  align-items: baseline;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.itemsat {
+  display: flex;
+  gap: 10px;
+  margin-left: 400px;
+  background-color: #e6e9ee;
+  color: #1844d4;
+  min-width: 700px;
+  padding-left: 10px;
+  padding-top: 10px;
+  border-radius: 5px;
+  align-items: baseline;
+  justify-content: center;
+}
